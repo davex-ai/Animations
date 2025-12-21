@@ -22,6 +22,7 @@ header{
     align-items: center;
     z-index: 10;
 }
+
 .logo{
     font-size:  2em;
     color: #fff;
@@ -107,6 +108,7 @@ input[type="radio"]:checked + .imgBx{
     margin-top: 20px;
     text-decoration: none;
 }
+
 input[type="radio"]{
     position: relative;
     z-index: 1000;
@@ -115,8 +117,19 @@ input[type="radio"]{
     outline: none;
     cursor: pointer;
 }
-
-/* .slider input[type="radio"]:checked + .imgBx {
-    z-index: 10;
-    clip-path: circle(1000px at center);
-} */
+@media (max-width: 768px) {
+    header{ 
+    padding: 20px 40px;
+}
+.imgBx{
+    padding: 40px;
+}
+.content h2{
+    font-size: 3em;
+}
+.content p{
+    font-size: 1em;
+    margin-top: 10px;
+}
+}
+ 

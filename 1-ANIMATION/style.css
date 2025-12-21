@@ -47,9 +47,9 @@ header{
     width: 100%;
     min-height: 100vh;
     display: flex;
-    justify-items: center;
+    justify-content: center;
     align-items: flex-end;
-    background: #111;
+    background: #000;
 }
 
 .imgBx{
@@ -63,8 +63,14 @@ header{
     justify-content: center;
     align-items: center;
     transition: 0.5;
+    transition-delay: 0s;
     z-index: 1;
     clip-path: circle(0px at center);
+}
+input[type="radio"]:checked + .imgBx{
+    z-index: 10;
+    clip-path: circle(1000px at center);
+    transition-delay: 0.75s;
 }
 .imgBx img{
     position: absolute;
@@ -81,7 +87,6 @@ header{
     max-width: 800px;
 }
 .content h2{
-    color: #fff;
     font-size: 6em;
     line-height: 1em;
     color: #fff;
@@ -102,7 +107,7 @@ header{
     margin-top: 20px;
     text-decoration: none;
 }
-.slider input[type="radio"]{
+input[type="radio"]{
     position: relative;
     z-index: 1000;
     margin: 5px;
@@ -111,7 +116,7 @@ header{
     cursor: pointer;
 }
 
-.slider input[type="radio"]:checked + .imgBx {
+/* .slider input[type="radio"]:checked + .imgBx {
     z-index: 10;
     clip-path: circle(1000px at center);
-}
+} */

@@ -40,27 +40,22 @@
         .banner img{
             position: absolute;
             width: 100%;
-            min-height: 100vh;
+            height: 100vh;
             object-fit: cover;
-            overflow: hidden;
             top: 0;
             left: 0;
+            z-index: -7;
 
         }
         .banner{
-            /* position: relative; */
+            position: relative;
             padding: 0 100vh;
-            /* background: url(bg.png); */
-             /* background-position: center;
-            background-size: cover; */
-            /* display: flex;
-            justify-content: flex-start;
-            align-items: center;  */
         }
         
          .banner .content{
-            max-width: 550px;
-            left: 0;
+            position: absolute;
+            left: 10em;
+            top: 20em;
         }
 
         .content h2{
@@ -72,7 +67,7 @@
         }
 
         .content span{
-            font-weight: 800 ;
+            font-weight: 800;
         }
 
         .content p{
@@ -82,12 +77,13 @@
             line-height: 1.5;
             color: #fff;
             margin: 15px 0 35px;
+            max-width: 550px;
         } 
 
-        .play{
+       .play{
             position: relative;
-            display: inline-flex;
-            justify-content: flex-start;
+            display: flex;
+            justify-content: space-between;
             align-self: center;
             color: #fff;
             text-transform: uppercase;
@@ -99,10 +95,13 @@
         }
 
         .play img{
-            margin-left: 10px;
-            max-width: 50px;
+            object-fit: scale-down;
+            margin-top: -25em;
         }
 
+        .slide{
+            
+        }
         .trailer{
             position: fixed;
             top: 50%;
@@ -137,7 +136,7 @@
             cursor: pointer;
             filter: invert(1);
             max-width: 32px;
-        }
+        } 
 
         @media (max-width: 991px) {
             
@@ -154,7 +153,7 @@
         <div class="content">
             <h2>Put on a <span>Happy</span> face</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem itaque, earum numquam, saepe consequatur delectus, corrupti ad ipsum necessitatibus laborum commodi ipsa ducimus in. Temporibus ipsa omnis beatae adipisci cum!</p>
-            <a href="" class="play" onclick="toggle()"><img src="play.png" alt="">Watch Trailer</a>
+            <a href="" class="play" onclick="toggle()"><img src="play.png" alt=""> Watch Trailer</a>
         </div>
     </div>
     <div class="trailer">

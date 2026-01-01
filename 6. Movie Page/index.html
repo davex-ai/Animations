@@ -11,6 +11,9 @@
             box-sizing: border-box;
             font-family: 'Poppins', sans-serif;
         }
+        body{
+            overflow: hidden;
+        }
 
         header{
             position: absolute;
@@ -101,11 +104,12 @@
 
         .slide{
             position: relative;
-            bottom: 50px;
+            bottom: -50em;
             left: calc(50% - 250px / 2);
             width: 250px;
             height: 150px;
-            object-fit: cover;
+            background: url(slide.png);
+            background-size:;
             cursor: pointer;
             animation: animate 25s linear infinite;
         }
@@ -174,8 +178,8 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem itaque, earum numquam, saepe consequatur delectus, corrupti ad ipsum necessitatibus laborum commodi ipsa ducimus in. Temporibus ipsa omnis beatae adipisci cum!</p>
             <a href="" class="play" onclick="toggle()"><img src="play.png" alt=""> Watch Trailer</a>
         </div>
-        <img src="bg.png" alt="" class="slide">
     </div>
+    <div class="slide"></div>
     <div class="trailer">
         <video src="trailer.mp4" controls="true"></video>
         <img src="close.png" alt="" class="close">

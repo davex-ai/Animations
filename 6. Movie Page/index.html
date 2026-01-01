@@ -37,16 +37,23 @@
              cursor: pointer;
         }
 
-        .banner{
-            position: relative;
+        .banner img{
+            position: absolute;
             width: 100%;
             min-height: 100vh;
+            object-fit: cover;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+
+        }
+        .banner{
+            /* position: relative; */
             padding: 0 100vh;
-            background: url(bg.png);
-             background-position: center;
-             object-fit: cover;
-            background-size: cover;
-         /*    display: flex;
+            /* background: url(bg.png); */
+             /* background-position: center;
+            background-size: cover; */
+            /* display: flex;
             justify-content: flex-start;
             align-items: center;  */
         }
@@ -67,6 +74,7 @@
         .content span{
             font-weight: 800 ;
         }
+
         .content p{
             font-size: 1.2em;
             font-weight: 300;
@@ -76,12 +84,31 @@
             margin: 15px 0 35px;
         } 
 
+        .play{
+            position: relative;
+            display: inline-flex;
+            justify-content: flex-start;
+            align-self: center;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 500;
+            text-decoration: none;
+            letter-spacing: 2px;
+            font-size: 1.2em;
+
+        }
+
+        .play img{
+            margin-left: 10px;
+            max-width: 50px;
+        }
+
         .trailer{
             position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            z-index: 1000;
+            z-index: 10000;
             background: rgba(0 , 0, 0, 0.95);
             width: 100%;
             height: 100%;
@@ -123,6 +150,7 @@
         <div class="toggle"><img src="toggle.png" alt=""></div>
     </header>
     <div class="banner">
+        <img src="bg.png" alt="">
         <div class="content">
             <h2>Put on a <span>Happy</span> face</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem itaque, earum numquam, saepe consequatur delectus, corrupti ad ipsum necessitatibus laborum commodi ipsa ducimus in. Temporibus ipsa omnis beatae adipisci cum!</p>

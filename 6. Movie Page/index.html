@@ -76,6 +76,45 @@
             margin: 15px 0 35px;
         } 
 
+        .trailer{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+            background: rgba(0 , 0, 0, 0.95);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            visibility: hidden;
+            opacity: 0;
+        }
+        
+        .trailer .active{
+            visibility: visible;
+            opacity: 1;
+
+        }
+
+        .trailer video{
+            min-width: 900px;
+            outline: none;
+        }
+
+        .trailer .close{
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            cursor: pointer;
+            filter: invert(1);
+            max-width: 32px;
+        }
+
+        @media (max-width: 991px) {
+            
+        }
     </style>
 </head>
 <body>
@@ -87,12 +126,18 @@
         <div class="content">
             <h2>Put on a <span>Happy</span> face</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem itaque, earum numquam, saepe consequatur delectus, corrupti ad ipsum necessitatibus laborum commodi ipsa ducimus in. Temporibus ipsa omnis beatae adipisci cum!</p>
-            <a href="" class="play"><img src="play.png" alt="">Watch Trailer</a>
+            <a href="" class="play" onclick="toggle()"><img src="play.png" alt="">Watch Trailer</a>
         </div>
     </div>
     <div class="trailer">
-        <video src=""></video>
+        <video src="" controls="true"></video>
         <img src="" alt="" class="close">
     </div>
+    <script type="text/javascript">
+        function toggle(){
+            var trailer = document.querySelector('.trailer') 
+            trailer.classList.toggle('active')
+        }
+    </script>
 </body>
 </html>

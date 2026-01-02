@@ -21,12 +21,22 @@
             left: calc(50% - 100px);
             transform-style: preserve-3d;
             transform: perspective(1000px);
+            animation: autoRun 10s linear infinite;
+        }
+
+        
+        @keyframes autoRun {
+            from{
+                transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+            }to{
+                transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+            }
         }
 
         .item{
             position: absolute;
             inset: 0 0 0 0;
-            transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+            transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) 
                 translateZ(550px);
         }
 
@@ -50,6 +60,16 @@
             <div class="item" style="--position: 8;"><img src="../1. ANIMATION/img3.png" alt=""></div>
             <div class="item" style="--position: 9;"><img src="../1. ANIMATION/img4.png" alt=""></div>
             <div class="item" style="--position: 10;"><img src="../5. ANIMATED-LANDING-PAGE/Gemini_Generated_Image_zftab5zftab5zfta.png" alt=""></div>
+        </div>
+        <div class="content">
+            <h1>CSS ONLY </h1>
+            <div class="author">
+                Daveora
+            </div>
+            <div class="model">
+                
+            </div>
+
         </div>
     </div>
 </body>

@@ -26,7 +26,8 @@
         .item{
             position: absolute;
             inset: 0 0 0 0;
-            transform: translateZ(550px);
+            transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg));
+            translateZ(550px);
         }
 
         .item img{
@@ -38,17 +39,17 @@
 </head>
 <body>
     <div class="banner">
-        <div class="slider">
-            <div class="item"><img src="../5. ANIMATED-LANDING-PAGE/Gemini_Generated_Image_zftab5zftab5zfta.png" alt=""></div>
-            <div class="item"><img src="../5. ANIMATED-LANDING-PAGE/Illustration1.png" alt=""></div>
-            <div class="item"><img src="../5. ANIMATED-LANDING-PAGE/Illustration2.png" alt=""></div>
-            <div class="item"><img src="../5. ANIMATED-LANDING-PAGE/Illustration3.png" alt=""></div>
-            <div class="item"><img src="../5. ANIMATED-LANDING-PAGE/Illustration4.png" alt=""></div>
-            <div class="item"><img src="../1. ANIMATION/img1.png" alt=""></div>
-            <div class="item"><img src="../1. ANIMATION/img2.png" alt=""></div>
-            <div class="item"><img src="../1. ANIMATION/img3.png" alt=""></div>
-            <div class="item"><img src="../1. ANIMATION/img4.png" alt=""></div>
-            <div class="item"><img src="../5. ANIMATED-LANDING-PAGE/Gemini_Generated_Image_zftab5zftab5zfta.png" alt=""></div>
+        <div class="slider" style="--quantity:3">
+            <div class="item" style="--position: 1;"><img src="../5. ANIMATED-LANDING-PAGE/Gemini_Generated_Image_zftab5zftab5zfta.png" alt=""></div>
+            <div class="item" style="--position: 2;"><img src="../5. ANIMATED-LANDING-PAGE/Illustration1.png" alt=""></div>
+            <div class="item" style="--position: 3;"><img src="../5. ANIMATED-LANDING-PAGE/Illustration2.png" alt=""></div>
+            <div class="item" style="--position: 4;"><img src="../5. ANIMATED-LANDING-PAGE/Illustration3.png" alt=""></div>
+            <div class="item" style="--position: 5;"><img src="../5. ANIMATED-LANDING-PAGE/Illustration4.png" alt=""></div>
+            <div class="item" style="--position: 6;"><img src="../1. ANIMATION/img1.png" alt=""></div>
+            <div class="item" style="--position: 7;"><img src="../1. ANIMATION/img2.png" alt=""></div>
+            <div class="item" style="--position: 8;"><img src="../1. ANIMATION/img3.png" alt=""></div>
+            <div class="item" style="--position: 9;"><img src="../1. ANIMATION/img4.png" alt=""></div>
+            <div class="item" style="--position: 10;"><img src="../5. ANIMATED-LANDING-PAGE/Gemini_Generated_Image_zftab5zftab5zfta.png" alt=""></div>
         </div>
     </div>
 </body>
